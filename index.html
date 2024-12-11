@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat</title>
+</head>
+<body>
+    <h1>Prog 10 (JAVASCRIPT WITH AJAX)</h1>
+    <code><!--<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Ajax Demo Program</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <style>
+    body {
+    font-family: Arial, sans-serif; line-height: 1.6;
+    margin: 0;
+    padding: 20px; background-color: #f4f4f4;
+    }
+    .container {
+     max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 {
+    color: #333;
+    }
+    h2 {
+    color: #666;
+    }
+    button {
+    background-color: #4CAF50; border: none;
+    color: white;
+    padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; border-radius: 4px;
+    }
+    pre {
+    background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 4px;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+    <h1>Ajax Demo Program</h1>
+    <h2>a. Ajax-like operation without jQuery</h2>
+    <button onclick="operationWithoutJQuery()">Perform Operation (without jQuery)</button> <pre id="result-a"></pre>
+    <h2>b. Ajax-like operation with jQuery</h2>
+    <button onclick="operationWithJQuery()">Perform Operation (with jQuery)</button> <pre id="result-b"></pre>
+    <h2>c. jQuery-like getJSON() method</h2>
+    <button onclick="getJSONOperation()">Get JSON</button> <pre id="result-c"></pre>
+    
+     <h2>d. jQuery parseJSON() method</h2>
+    <button onclick="parseJSONExample()">Parse JSON</button> <pre id="result-d"></pre>
+    </div>
+    <script>
+    // Simulated data
+    const simulatedData = {
+    text: "This is a sample text from a simulated server response.", json: {
+    name: "John Doe",
+    age: 30,
+    city: "New York"
+    }
+    };
+    // a. Ajax-like operation without jQuery
+    function operationWithoutJQuery() {
+    setTimeout(function() { document.getElementById("result-a").textContent = simulatedData.text; }, 500);
+    }
+    // b. Ajax-like operation with jQuery function operationWithJQuery() { $.Deferred(function(deferred) { setTimeout(function() { deferred.resolve(simulatedData.text); }, 500);
+    }).done(function(result) { $("#result-b").text(result);
+    });
+    }
+    // c. jQuery-like getJSON() method function getJSONOperation() { $.Deferred(function(deferred) { setTimeout(function() { deferred.resolve(simulatedData.json); }, 500);
+    }).done(function(result) { $("#result-c").text(JSON.stringify(result, null, 2)); });
+    }
+    // d. jQuery parseJSON() method
+    function parseJSONExample() {
+    var jsonString = JSON.stringify(simulatedData.json); var jsonObject = $.parseJSON(jsonString); $("#result-d").text(JSON.stringify(jsonObject, null, 2)); }
+    
+    </script> </body> </html>  --></code>
+
+
+<h1>Prog 9 (JQUERY SCRIPT)</h1>
+<code><!--   <!DOCTYPE html> <html lang="en"> <head>
+    <meta charset="UTF-8"> <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>jQuery Append, Animate, and Color Change Demo</title>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6; }
+    .container {
+    max-width: 800px;
+    margin:auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+    color: #333; }
+    .box {
+    width: 100px;
+    height: 100px; background-color: #3498db; margin: 20px 0;
+    }
+    button {
+    padding: 10px 15px; background-color: #2ecc71; color: white;
+    border: none; border-radius: 5px;
+    cursor: pointer;
+     margin-right: 10px;
+    }
+    button:hover { background-color: #27ae60; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> </head>
+    <body>
+    <div class="container"> <h1>jQuery Demonstration</h1>
+    <h2> Append Content</h2>
+    <p id="existingParagraph">This is an existing paragraph. </p> <ul id="existingList">
+    <li>Existing item 1</li>
+    <li>Existing item 2</li>
+    </ul>
+    <button id="appendButton">Append Content</button>
+    <h2> Animate Element</h2>
+    <div id="animateBox" class="box"></div>
+    <button id="animateButton">Animate Box</button>
+    <h2>Change Color of Animated element</h2>
+    <div id="colorBox" class="box"></div>
+    <button id="colorAnimateButton">Animate and Change Color</button> </div>
+    <script>
+    $(document).ready(function() {
+    $("#appendButton").click(function() { $("#existingParagraph").append("This content is appended."); $("#existingList").append("<li>Appended item</li>");
+    });
+    $("#animateButton").click(function() { $("#animateBox").animate({
+    width: "200px", height: "200px", }, 1000);
+    });
+    
+    $("#colorAnimateButton").click(function() { $("#colorBox").animate({
+    width: "200px",
+    height: "200px" }, 1000,
+    function() { $(this).css("background-color", "red");
+    }); });
+    }); </script>
+    </body> </html> --></code>
+
+<h1>Prog 7 (JSON-CSV CONVERTOR)</h1>
+ <code><!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>JSON/CSV Converter and Hash Generator</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ line-height: 1.6;
+ margin: 0;
+ padding: 20px; background-color: #f4f4f4;
+ } .container {
+ max-width: 800px;
+ margin: auto;
+ background: white;
+ padding: 20px;
+ border-radius: 5px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ } h1 {
+ color: #333; }
+ textarea {
+ width: 100%;
+ height: 100px; margin-bottom: 10px;
+ } button {
+ background-color: #4CAF50; color: white;
+ padding: 10px 15px;
+ border: none;
+  border-radius: 4px; cursor: pointer; margin-right: 10px;
+ } button:hover {
+ background-color: #45a049; }
+ #result {
+ margin-top: 20px;
+ padding: 10px; background-color: #e7e7e7; border-radius: 4px;
+ } </style>
+ </head>
+ <body>
+ <div class="container">
+ <h1>JSON/CSV Converter and Hash Generator</h1>
+ <h2>a) Convert JSON to JavaScript Object</h2>
+ <textarea id="jsonInput" placeholder="Enter data in JSON format"></textarea> <button onclick="convertJsonToObject()">Convert to JS Object</button>
+ <h2>b) Convert JSON to Date</h2>
+ <textarea id="jsonDateInput" placeholder='Enter JSON date'></textarea> <button onclick="convertJsonToDate()">Convert to Date</button>
+ <h2>c) Convert JSON to CSV and CSV to JSON</h2>
+ <textarea id="dataInput" placeholder="Enter JSON or CSV"></textarea> <button onclick="convertJsonToCsv()">Convert JSON to CSV</button>
+ <button onclick="convertCsvToJson()">Convert CSV to JSON</button>
+ <h2>d) Create Hash from String</h2>
+ <textarea id="hashInput" placeholder="Enter string"></textarea> <button onclick="generateHash()">Generate Hash</button>
+ <div id="result"></div> </div>
+ <script>
+ function convertJsonToObject() { try {
+ 
+  const jsonInput = document.getElementById('jsonInput').value; const jsObject = JSON.parse(jsonInput);
+ document.getElementById('result').innerText = 'Converted Object:'+ JSON.stringify(jsObject, null, 2);
+ } catch (error) {
+ document.getElementById('result').innerText = 'Error: ' + error.message;
+ } }
+ function convertJsonToDate() { try {
+ const jsonInput = document.getElementById('jsonDateInput').value;
+ const jsObject = JSON.parse(jsonInput);
+ const date = new Date(jsObject.date); document.getElementById('result').innerText = 'Converted Date: ' + date.toString();
+ } catch (error) {
+ document.getElementById('result').innerText = 'Error: ' + error.message;
+ } }
+ function convertJsonToCsv() {
+ const jsonInput = document.getElementById('dataInput').value; try {
+ const json = JSON.parse(jsonInput);
+ const csv = jsonToCsv(json); document.getElementById('result').innerHTML = `<pre>${csv}</pre>`;
+ } catch (error) {
+ alert('Invalid JSON format!');
+ } }
+ function jsonToCsv(json) {
+ const array = Array.isArray(json) ? json : [json]; const header = Object.keys(array[0]);
+ const rows = array.map(obj =>
+ header.map(fieldName => JSON.stringify(obj[fieldName] || '')).join(',') );
+ return [header.join(','), ...rows].join('\n'); }
+ function convertCsvToJson() {
+ const csvInput = document.getElementById('dataInput').value;
+ 
+  try {
+ const json = csvToJson(csvInput);
+ console.log(JSON.stringify(json));
+ document.getElementById('result').innerHTML = `<pre>${JSON.stringify(json, null,
+ 2)}</pre>`;
+ } catch (error) {
+ alert('Invalid CSV format!'); }
+ }
+ function csvToJson(csv) {
+ const lines = csv.split('\n');
+ const headers = lines[0].split(','); const result = [];
+ for (let i = 1; i < lines.length; i++) { const obj = {};
+ const currentLine = lines[i].split(',');
+ if (currentLine.length === headers.length) { for (let j = 0; j < headers.length; j++) {
+ obj[headers[j]] = currentLine[j].trim(); }
+ result.push(obj); }
+ }
+ return result; }
+ async function generateHash() {
+ const inputString = document.getElementById('hashInput').value;
+ const encoder = new TextEncoder();
+ const data = encoder.encode(inputString);
+ const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+ const hashArray = Array.from(new Uint8Array(hashBuffer));
+ const hexString = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+ document.getElementById('result').textContent = hexString; }
+ </script>
+ </body> </html> --></code>
+
+    <h1>Prog 6 (SIMPLE CALCULATOR)</h1>
+   <code><!--  <!DOCTYPE html> <html lang="en"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Simple Calculator</title>
+    <style>
+    body {
+     font-family: Arial, sans-serif; display: flex;
+    justify-content: center; align-items: center;
+    height: 100vh;
+    margin: 0; background-color: #f0f0f0;
+    } .calculator {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px;
+    width: 300px;
+    } #display {
+    width: 100%;
+    height: 40px;
+    font-size: 1.5em; text-align: right; margin-bottom: 10px; padding: 5px; box-sizing: border-box;
+    } .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); gap: 10px;
+    } button {
+    padding: 10px;
+    font-size: 1.2em;
+    border: none; background-color: #e0e0e0; cursor: pointer; border-radius: 4px;
+    } button:hover {
+    background-color: #d0d0d0; }
+    .operator {
+    background-color: #f0a030; color: white;
+    }
+    
+     .operator:hover {
+    background-color: #e09020;
+    } </style>
+    </head> <body>
+    <div class="calculator">
+    <input type="text" id="display"> <div class="buttons">
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button class="operator" onclick="setOperation('+')">+</button> <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button class="operator" onclick="setOperation('-')">-</button> <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button class="operator" onclick="setOperation('*')">*</button>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="appendToDisplay('.')">.</button>
+    <button class="operator" onclick="calculate()">=</button>
+    <button class="operator" onclick="setOperation('/')">/</button>
+    <button class="operator" onclick="setOperation('%')">%</button>
+    <button class="operator" onclick="setOperation('^')">x<sup>y</sup></button> <button class="operator" onclick="squareRoot()">√</button>
+    <button class="operator" onclick="square()">x<sup>2</sup></button> <button onclick="clearDisplay()">C</button>
+    </div> </div>
+    <script>
+    let display = document.getElementById('display'); let currentValue = '';
+    let operation = '';
+    let previousValue = '';
+    function appendToDisplay(value) { currentValue += value; display.value = currentValue;
+    }
+    function clearDisplay() {
+    
+     currentValue = ''; operation = ''; previousValue = ''; display.value = ''; }
+    function setOperation(op) { if (currentValue !== '') {
+    if (previousValue !== '') { calculate();
+    }
+    operation = op;
+    previousValue = currentValue; currentValue = '';
+    } }
+    function calculate() {
+    if (previousValue !== '' && currentValue !== '') {
+    let result;
+    const prev = parseFloat(previousValue); const current = parseFloat(currentValue); switch(operation) {
+    case '+':
+    result = prev + current; break;
+    case '-':
+    result = prev - current; break;
+    case '*':
+    result = prev * current; break;
+    case '/':
+    result = prev / current; break;
+    case '%':
+    result = prev % current; break;
+    case '^':
+    result = Math.pow(prev, current); break;
+    
+    }
+    display.value = result;
+    } }
+    function squareRoot() {
+    if (currentValue !== '') {
+    const result = Math.sqrt(parseFloat(currentValue)); display.value = result;
+    } }
+    function square() {
+    if (currentValue !== '') {
+    const result = Math.pow(parseFloat(currentValue), 2); display.value = result;
+    }
+    } </script>
+    </body> </html> -->
+</code> 
+       
+</body>
+</html>
